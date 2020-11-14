@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ActivityIndicatorViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAW-zw-qxn">
+                                <rect key="frame" x="0.0" y="114" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyQ-N0-0Uw">
+                                <rect key="frame" x="115" y="49" width="184" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="請按我開始倒數計時"/>
+                                <connections>
+                                    <action selector="countDownClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IcF-Wd-Nf2"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-jA-wzD">
+                                <rect key="frame" x="188.66666666666666" y="106" width="37" height="37"/>
+                                <color key="color" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kdd-jA-wzD" firstAttribute="top" secondItem="WyQ-N0-0Uw" secondAttribute="bottom" constant="21" id="DGi-2f-ciy"/>
+                            <constraint firstItem="hAW-zw-qxn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jvr-oM-nrx"/>
+                            <constraint firstAttribute="trailing" secondItem="hAW-zw-qxn" secondAttribute="trailing" id="Lfm-wY-5C1"/>
+                            <constraint firstItem="hAW-zw-qxn" firstAttribute="centerY" secondItem="kdd-jA-wzD" secondAttribute="centerY" id="PLn-pj-nqL"/>
+                            <constraint firstItem="WyQ-N0-0Uw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="mHq-UW-310"/>
+                            <constraint firstItem="kdd-jA-wzD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oIk-SZ-QFT"/>
+                            <constraint firstItem="WyQ-N0-0Uw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v6L-Lk-ZPm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="kdd-jA-wzD" id="6LT-Qg-AL5"/>
+                        <outlet property="lbNumber" destination="hAW-zw-qxn" id="vvZ-bI-5ir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="338.68065967016497"/>
+        </scene>
+    </scenes>
+</document>
